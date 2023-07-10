@@ -78,7 +78,7 @@ const productos = [
     //Snacks
     {
         id: "pochoclosBolsa-01",
-        titulo: "Pochoclos Bolsa 08",
+        titulo: "Pochoclos Bolsa",
         imagen: "./img/pochoclos-bolsa.jpg",
         categoria: {
             nombre: "Snacks y golosinas",
@@ -88,7 +88,7 @@ const productos = [
     },
     {
         id: "pochoclos-grandes-02",
-        titulo: "Pochoclos Grandes 09",
+        titulo: "Pochoclos Grandes",
         imagen: "./img/pochoclos-grandes.jpg",
         categoria: {
             nombre: "Snacks y golosinas",
@@ -98,7 +98,7 @@ const productos = [
     },
     {
         id: "doritos-03",
-        titulo: "Doritos 03",
+        titulo: "Doritos",
         imagen: "./img/doritos.webp",
         categoria: {
             nombre: "Snacks y golosinas",
@@ -108,7 +108,7 @@ const productos = [
     },
     {
         id: "hamletChocolate-04",
-        titulo: "Hamlet chocolate 04",
+        titulo: "Hamlet chocolate",
         imagen: "./img/hamlet-chocolate.webp",
         categoria: {
             nombre: "Snacks y golosinas",
@@ -118,7 +118,7 @@ const productos = [
     },
     {
         id: "chupetines-05",
-        titulo: "Chupetines 05",
+        titulo: "Chupetines",
         imagen: "./img/chupetines-algodon.jpg",
         categoria: {
             nombre: "Snacks y golosinas",
@@ -128,7 +128,7 @@ const productos = [
     },
     {
         id: "pastillitas-06",
-        titulo: "Pastillitas 06",
+        titulo: "Pastillitas",
         imagen: "./img/pastillitas.webp",
         categoria: {
             nombre: "Snack",
@@ -139,7 +139,7 @@ const productos = [
 
     {
         id: "bandeja-nachos-07",
-        titulo: "Bandeja Nachos 07",
+        titulo: "Bandeja Nachos",
         imagen: "./img/bandeja-nachos.jpg",
         categoria: {
             nombre: "Snack",
@@ -149,7 +149,7 @@ const productos = [
     },
     {
         id: "combo-nachos-08",
-        titulo: "Combo nachois 08",
+        titulo: "Combo nachois",
         imagen: "./img/combo-nachos.jpg",
         categoria: {
             nombre: "Snacks y golosinas",
@@ -221,7 +221,6 @@ botonesCategorias.forEach(boton => {
         if (e.currentTarget.id != "todos") {
             const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
             tituloPrincipal.innerText = productoCategoria.categoria.nombre;
-
             const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
             cargarProductos(productosBoton);
         } else {
@@ -242,15 +241,15 @@ function actualizarBotonesAgregar() {
 }
 
 
-let productosEncarrito;
+let productosEnCarrito;
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
 
-const productosEncarritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
-if (productosEncarritoLS) {
-    productosEncarrito = productosEncarritoLS;
+if (productosEnCarritoLS) {
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
     actualizarNumerito();
 
 } else {
-    productosEncarrito = [];
+    productosEnCarrito = [];
 }
 
 
@@ -260,27 +259,27 @@ function agregarAlCarrito(e) {
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton);
 
-    if (productosEncarrito.some(producto => producto.id === idBoton)) {
+    if (productosEnCarrito.some(producto => producto.id === idBoton)) {
 
-      const index = productosEncarrito.findIndex(producto => producto.id === idBoton);
-      productosEncarrito[index].cantidad++;
+      const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
+      productosEnCarrito[index].cantidad++;
 
 
     } else {
 
         productoAgregado.cantidad = 1;
-        productosEncarrito.push(productoAgregado);
+        productosEnCarrito.push(productoAgregado);
 
 
     }
 
    actualizarNumerito();
 
-   localStorage.setItem("productos-en-carrito", JSON.stringify(productosEncarrito));
+   localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
 
 function actualizarNumerito() {
-    let nuevoNumerito = productosEncarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+    let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;  
     
 }

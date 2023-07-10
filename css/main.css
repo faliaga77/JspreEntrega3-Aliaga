@@ -204,12 +204,12 @@ width: 300px;
 .carrito-producto-imagen {
     width: 4rem;
     border-radius: 1rem;
-    align-items: center;
+    
 }
 
 .carrito-producto small {
     font-size: .75rem;
-    align-items: center;
+
 
 }
 
