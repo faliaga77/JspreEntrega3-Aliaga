@@ -1,4 +1,4 @@
-const productosEncarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
+const productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
 
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoProductos = document.querySelector("#carrito-productos");
@@ -12,7 +12,7 @@ function cargarProductosCarrito() {
         contenedorCarritoVacio.classList.add("disabled");
         contenedorCarritoProductos.classList.remove("disabled");
         contenedorCarritoAcciones.classList.remove("disabled");
-        contenedorCarritoComprado.classList.add("desabled");
+        contenedorCarritoComprado.classList.add("disabled");
 
         contenedorCarritoProductos.innerHTML = "";
 
