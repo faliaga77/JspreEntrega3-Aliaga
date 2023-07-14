@@ -81,7 +81,7 @@ const productos = [
         titulo: "Pochoclos Bolsa",
         imagen: "./img/pochoclos-bolsa.jpg",
         categoria: {
-            nombre: "Snacks y golosinas",
+            nombre: "Snacks",
             id: "snaks"
         },
         precio: 950
@@ -91,7 +91,7 @@ const productos = [
         titulo: "Pochoclos Grandes",
         imagen: "./img/pochoclos-grandes.jpg",
         categoria: {
-            nombre: "Snacks y golosinas",
+            nombre: "Snacks",
             id: "snacks"
         },
         precio: 1100
@@ -101,7 +101,7 @@ const productos = [
         titulo: "Doritos",
         imagen: "./img/doritos.webp",
         categoria: {
-            nombre: "Snacks y golosinas",
+            nombre: "Snacks",
             id: "snacks"
         },
         precio: 850
@@ -111,7 +111,7 @@ const productos = [
         titulo: "Hamlet chocolate",
         imagen: "./img/hamlet-chocolate.webp",
         categoria: {
-            nombre: "Snacks y golosinas",
+            nombre: "Snacks",
             id: "snacks"
         },
         precio: 450
@@ -121,7 +121,7 @@ const productos = [
         titulo: "Chupetines",
         imagen: "./img/chupetines-algodon.jpg",
         categoria: {
-            nombre: "Snacks y golosinas",
+            nombre: "Snacks",
             id: "snacks"
         },
         precio: 350
@@ -132,7 +132,7 @@ const productos = [
         imagen: "./img/pastillitas.webp",
         categoria: {
             nombre: "Snack",
-            id: "Snacks y golosinas"
+            id: "snacks"
         },
         precio: 500
     },
@@ -143,7 +143,7 @@ const productos = [
         imagen: "./img/bandeja-nachos.jpg",
         categoria: {
             nombre: "Snack",
-            id: "Snacks y golosinas"
+            id: "snacks"
         },
         precio: 1900
     },
@@ -152,7 +152,7 @@ const productos = [
         titulo: "Combo nachois",
         imagen: "./img/combo-nachos.jpg",
         categoria: {
-            nombre: "Snacks y golosinas",
+            nombre: "Snacks",
             id: "snacks"
         },
         precio: 2200
@@ -162,7 +162,7 @@ const productos = [
         titulo: "Pochoclos grandes",
         imagen: "./img/combo-pochoclo-gaseosa-grande.webp",
         categoria: {
-            nombre: "Snacks y golosinas",
+            nombre: "Snacks",
             id: "snacks"
         },
         precio: 2200
@@ -172,7 +172,7 @@ const productos = [
         titulo: "Pochoclos",
         imagen: "./img/combo-pochoclo-gaseosa.avif",
         categoria: {
-            nombre: "Snacks y golosinas",
+            nombre: "Snacks",
             id: "snacks"
         },
         precio: 1800
