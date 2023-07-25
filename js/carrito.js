@@ -61,7 +61,7 @@ function cargarProductosCarrito() {
         contenedorCarritoVacio.classList.remove("disabled");
         contenedorCarritoProductos.classList.add("disabled");
         contenedorCarritoAcciones.classList.add("disabled");
-        contenedorCarritoComprado.classList.add("desabled");
+        contenedorCarritoComprado.classList.add("disabled");
 
 
     }
@@ -122,7 +122,7 @@ function comprarCarrito() {
     contenedorCarritoVacio.classList.add("disabled");
     contenedorCarritoProductos.classList.add("disabled");
     contenedorCarritoAcciones.classList.add("disabled");
-    contenedorCarritoComprado.classList.remove("desabled");
+    contenedorCarritoComprado.classList.remove("disabled");
     
 
 
