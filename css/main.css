@@ -177,9 +177,9 @@ width: 300px;
 .carrito-vacio,
 .carrito-comprado {
     color: var(--clr-main);
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1rem; */
 
 }
 
