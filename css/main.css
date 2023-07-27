@@ -176,7 +176,8 @@ width: 300px;
 
 .carrito-vacio,
 .carrito-comprado {
-    color: var(--clr-main);
+    color: #1b132f;
+    /* color: var(--clr-main); */
     /* display: flex;
     justify-content: space-between;
     gap: 1rem; */
